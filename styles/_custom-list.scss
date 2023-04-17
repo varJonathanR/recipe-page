@@ -1,0 +1,23 @@
+.ol{
+    list-style-type: none;
+    .instruction{
+        margin: 1.5rem 0;
+        counter-increment: counter;
+        position: relative;
+        &::before{
+            content: counter(counter);
+            color: #fff;
+            background-color: $orange;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: absolute;
+            left: calc(-1 * $size - 10px);
+            line-height: $size;
+            width: $size;
+            height: $size;
+            top: 0;
+            text-align: center;
+        }
+    }
+}
